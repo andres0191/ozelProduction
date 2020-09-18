@@ -3,4 +3,54 @@
     width: 100%;
     border-top-left-radius: 80px;
     border-top-right-radius: 80px;
+    position: absolute;
+
 }
+.text{
+    position: absolute;
+    margin-left: 15%;
+    color: white;
+    width: 500px;
+    text-align: justify;
+    margin-top: 20px;
+}
+.logo{
+    margin-left: 5%;
+    padding: 2%;
+    position: absolute;
+}
+.socialNetworks{
+    color: white;
+    justify-content: flex-end;
+    display: grid;
+    margin: 10px;
+    padding: 35px;
+    list-style: none;
+}
+.contact{
+    color: white;
+    justify-content: space-around;
+    list-style: none;
+    display: flex;
+}
+
+
+
+/* .icons{
+    color: white;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 50%;
+    display: -ms-flexbox!important;
+    position: relative;
+    display: inherit;
+}
+.contact{
+    position: inherit;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+
+} */
