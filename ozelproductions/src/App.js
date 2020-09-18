@@ -33,7 +33,6 @@ export default function App() {
             <Home />
           </Route>
         </Switch>
-      <Chat />
     </Router>
   );
 }
