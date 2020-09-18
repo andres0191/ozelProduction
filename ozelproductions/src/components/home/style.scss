@@ -1,4 +1,47 @@
 .imagenes{
     width: 50%;
     height: 50%;
+    justify-content: center;
+    display: flex;
+}
+
+.etiquetas{
+    justify-content: center;
+    display: flex;
+    float: left;
+    margin: 3%; 
+    background-color: red;
+}
+.title{
+    text-align: center;
+    color: linear-gradient(90deg, rgb(15, 41, 49) 0%, rgb(42, 165, 159) 74%);
+    font-size: 60px;
+    background: transparent;
+    margin: 3%;
+}
+
+.slide{
+    margin: auto;
+    width: 100%;
+}
+.father{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardStyleEvent{
+    width: 18%;
+    -webkit-box-shadow: 0px 0px 39px -4px rgba(56,189,194,1);
+    -moz-box-shadow: 0px 0px 39px -4px rgba(56,189,194,1);
+    box-shadow: 0px 0px 39px -4px rgba(56,189,194,1);
+    float: left;
+    margin: 3%; 
+
+}
+
+.containerCards{
+    margin-top: 5%;
 }
