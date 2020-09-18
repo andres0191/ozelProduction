@@ -2,16 +2,11 @@ import React from 'react';
 import imagen1 from '../images/evento/2019-7.jpg';
 import imagen2 from '../images/evento/2019-2.jpg';
 import imagen3 from '../images/evento/2019-3.jpg';
-import imagen4 from '../images/evento/2019-4.jpg';
-import imagen5 from '../images/evento/2019-5.jpg';
-import imagen6 from '../images/evento/2019-6.jpg';
-import imagen7 from '../images/evento/2019-7.jpg';
 import event1 from '../images/evento1/acdc.jpeg';
 import event2 from '../images/evento1/andrerieu.jpg';
 import event3 from '../images/evento1/filarmonicaBgta.jpg';
 import event4 from '../images/evento1/teatro.jpg'
 import './style.scss';
-
 
 export default function Home(){
     return(

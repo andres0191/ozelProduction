@@ -4,7 +4,8 @@ import About from './components/about/About';
 import Login from './components/login/Login';
 import Home from './components/home/Home';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Chat from './components/home/Chat';
+import Trivia from './components/trivia/Trivia';
+import Footer from './components/footer/Footer'
 
 export default function App() {
   return (
@@ -19,12 +20,16 @@ export default function App() {
             <Link className='nav-item nav-link' style={{color: 'white'}} to='/'>Inicio<span class="sr-only">(current)</span></Link>
             <Link className='nav-item nav-link' style={{color: 'white'}} to='/About'>Nosotros<span class="sr-only">(current)</span></Link>
             <Link className='nav-item nav-link' style={{color: 'white'}} to='/Login'>Boleteria<span class="sr-only">(current)</span></Link>
+            <Link className='nav-item nav-link' style={{color: 'white'}} to='/Trivia'>Trivias<span class="sr-only">(current)</span></Link>
           </div>
         </div>
       </nav>
         <Switch>
           <Route path="/About">
             <About />
+          </Route>
+          <Route path="/Trivia">
+            <Trivia />
           </Route>
           <Route path="/Login">
             <Login />
@@ -33,6 +38,7 @@ export default function App() {
             <Home />
           </Route>
         </Switch>
+        <Footer />
     </Router>
   );
 }
