@@ -1,3 +1,92 @@
+.titulo{
+    text-align: center;
+    color: rgb(231, 61, 209);
+    font-size: 60px;
+    margin: 3%;
+    position: relative;
+}
+.datosEvento{
+    justify-content: flex-end;
+    display: grid;
+    margin: 10px;
+    padding: 35px;
+    list-style: none;
+    position: absolute;
+    right: 13px;
+}
+.datosEvento1{
+    justify-content: flex-end;
+    display: grid;
+    margin: 10px;
+    padding: 35px;
+    list-style: none;
+    position: absolute;
+    left: 13px;
+    
+}
+.slidesCarousel{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 20px;
+}
+.etiquetas{
+    justify-content: center;
+    display: flex;
+    float: left;
+    margin: 3%;
+}
+.proxEventos{
+    list-style: none;
+    display: flex;
+    margin: 5%;
+}
+
+.event{
+    margin: auto 30px;
+}
+
+.containerCards{
+    display: flex;
+    flex-wrap: wrap;
+}
+.border{
+    border-radius: 10px;
+}
+.imgCard{
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-radius: 10px;
+}
+.btn-primary{
+    color: #fff;
+    background-color: pink;
+    border-color: black;
+}
+.pCards {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+/* .father{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.containerCards{
+    width: 25%;
+    justify-content: space-around;
+    list-style: none;
+    display: flex;
+
+}
+
 .imagenes{
     width: 50%;
     height: 50%;
@@ -24,13 +113,7 @@
     margin: auto;
     width: 100%;
 }
-.father{
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .cardStyleEvent{
     width: 18%;
@@ -47,4 +130,4 @@
 
 .card-body{
  overflow: scroll;
-}
+} */
