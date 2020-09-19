@@ -16,15 +16,8 @@ export default function Boleteria(){
         userPassword: '',
         isPassword: false,
     });
-
-    const handleOnChange = (event) =>{
-        const inputValue = event.target.value;
-
-    }
     const userValidation = (event) =>{
-        event.preventDefault();
-        setValidation({
-            ...validation,
+            setValidation({
             userName: event.target.value
         });
         const regexForName = /^[A-Za-z]+$/.test(event.target.value);
@@ -38,11 +31,10 @@ export default function Boleteria(){
                 ...validation,
                 'isName': false
             })
-        }
+        } 
         
     }
     const numberValidation = (event) =>{
-        event.preventDefault();
         setValidation({
             ...validation,
             userNumber: event.target.value
@@ -117,17 +109,18 @@ export default function Boleteria(){
             })
         }
     }
-
+/* event.target.checked */
     const enviar = (event) =>{
-        event.preventDefault();
-        if(validation.userName && validation.userNumber && validation.userDni && validation.userEmail && validation.userPassword ){
+        console.log(validation.isName, validation.isNumber, validation.isDni, validation.isEmail, validation.isPassword)
+        if(validation.isName && validation.isNumber && validation.isDni && validation.isEmail && validation.isPassword ){
             myModal.current.removeAttribute('data-backdrop');
             openModal.current.click();
         }
     }
     useEffect(() => {
         openModal.current.click();
-    })
+
+    },[])
     return(
         <div>
             <div class="modal fade" ref={myModal} data-backdrop="static" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -140,7 +133,7 @@ export default function Boleteria(){
                         <div class="modal-body mx-3">
                             <div class="md-form mb-5">
                                 <i class="fas fa-user prefix grey-text"></i>
-                                <input type="text" id="form34" class="form-control validate" onChange={ event => userValidation(event)} placeholder='Nombre' />
+                                <input type="text" id="form34" class="form-control validate" onChange={userValidation} placeholder='Nombre' />
                             </div>
                             <div class="md-form mb-5">
                                 <i class="fas fa-tag prefix grey-text"></i>
