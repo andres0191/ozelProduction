@@ -5,6 +5,17 @@
     margin: 3%;
     position: relative;
 }
+@media (max-width: 1141px) {
+    .titulo{
+        flex-flow: column;
+        font-size: 30px;   
+    }
+}
+@media (max-width: 1141px){
+    p{
+        width: 30%;
+    }
+}
 .datosEvento{
     justify-content: flex-end;
     display: grid;
@@ -14,15 +25,9 @@
     position: absolute;
     right: 13px;
 }
-@media (max-width: 500px) {
+@media (max-width: 1141px) {
     .datosEvento{
-        flex-flow: column;
-        display: grid;
-        margin: 10px;
-        padding: 35px;
-        list-style: none;
-        position: absolute;
-        right: 13px;            
+        flex-flow: column;           
     }
 }
 .datosEvento1{
@@ -34,16 +39,9 @@
     position: absolute;
     left: 13px;    
 }
-@media (max-width: 500px) {
+@media (max-width: 1141px) {
     .datosEvento1{
         flex-flow: column;
-        justify-content: flex-end;
-        display: grid;
-        margin: 10px;
-        padding: 35px;
-        list-style: none;
-        position: absolute;
-        left: 13px;        
     }
 }
 .slidesCarousel{
@@ -56,12 +54,6 @@
     margin: auto;
     border-radius: 20px;
 }
-.etiquetas{
-    justify-content: center;
-    display: flex;
-    float: left;
-    margin: 3%;
-}
 .proxEventos{
     list-style: none;
     display: flex;
@@ -69,16 +61,14 @@
     margin: 5%;
     flex-flow: row;
 }
-@media (max-width: 500px) {
+@media (max-width: 1141px) {
     .proxEventos{
         flex-flow: column;
     }
 }
-
 .event{
     margin: auto 1%;
 }
-
 .containerCards{
     display: flex;
     flex-wrap: wrap;
@@ -90,6 +80,12 @@
     border-top-right-radius: 50px;
     border-top-left-radius: 50px;
     border-radius: 10px;
+}
+@media (max-width: 500px){
+    .imgCard{
+        border-radius: 10px;
+        width: 60%;
+        }
 }
 .btn-primary{
     color: #fff;
