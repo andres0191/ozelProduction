@@ -22,50 +22,52 @@ export default function Home(){
             <div className='titulo'>
                 <p>TOMORROWLAND</p>
             </div>
-            <div>
-                <div>
-                    <ul className='datosEvento1'>
-                        <li>
-                            <IconContext.Provider value={{ color:"#EEB1DE", className: "global-class-name", size:'1em', size:'1.5em'}} >
-                                <div>
-                                    <a href="/Boleteria" target='_blank'>
-                                        <p className="float-right iconcenter" style={{margin: 10, color: 'rgb(231, 61, 209)'}}>
-                                    <MdDateRange /> Nov. 20</p>
-                                    </a>
-                                </div>
-                            </IconContext.Provider>
-                        </li>
-                        <li>
-                            <IconContext.Provider value={{ color:"#EEB1DE", className: "global-class-name", size:'1em', size:'1.5em'}} >
-                                <div>
-                                    <a href="/Boleteria" target='_blank'>
-                                        <p className="float-right iconcenter" style={{margin: 10, color: 'rgb(231, 61, 209)'}}>
-                                        <BiMap /> Belgica</p>
-                                    </a>
-                                </div>
-                            </IconContext.Provider>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <ul className='datosEvento'>
-                        <li><IconContext.Provider value={{ color:"#EEB1DE", className: "global-class-name", size:'1em', size:'1.5em'}} >
-                                <div>
-                                    <a href="/Boleteria" target='_blank'>
-                                        <p className="float-right iconcenter" style={{margin: 10, color: 'rgb(231, 61, 209)'}}>
-                                        <SiMixer />DJ Mundiales!</p>
-                                    </a>
-                                </div>
-                            </IconContext.Provider></li>
-                        <li><IconContext.Provider value={{ color:"#EEB1DE", className: "global-class-name", size:'1em', size:'1.5em'}} >
-                                <div>
-                                    <a href="/Boleteria" target='_blank'>
-                                        <p className="float-right iconcenter" style={{margin: 10, color: 'rgb(231, 61, 209)'}}>
-                                        <TiTicket />Entradas!!</p>
-                                    </a>
-                                </div>
-                            </IconContext.Provider></li>
-                    </ul>
+            <div className='dataandCarouserl'>
+                <div className='dataEventResponsive'>
+                    <div>
+                        <ul className='datosEvento1'>
+                            <li>
+                                <IconContext.Provider value={{ color:"#EEB1DE", className: "global-class-name", size:'1em', size:'1.5em'}} >
+                                    <div>
+                                        <a href="/Boleteria" target='_blank'>
+                                            <p className="float-right iconcenter" style={{margin: 10, color: 'rgb(231, 61, 209)'}}>
+                                        <MdDateRange /> Nov. 20</p>
+                                        </a>
+                                    </div>
+                                </IconContext.Provider>
+                            </li>
+                            <li>
+                                <IconContext.Provider value={{ color:"#EEB1DE", className: "global-class-name", size:'1em', size:'1.5em'}} >
+                                    <div>
+                                        <a href="/Boleteria" target='_blank'>
+                                            <p className="float-right iconcenter" style={{margin: 10, color: 'rgb(231, 61, 209)'}}>
+                                            <BiMap /> Belgica</p>
+                                        </a>
+                                    </div>
+                                </IconContext.Provider>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul className='datosEvento'>
+                            <li><IconContext.Provider value={{ color:"#EEB1DE", className: "global-class-name", size:'1em', size:'1.5em'}} >
+                                    <div>
+                                        <a href="/Boleteria" target='_blank'>
+                                            <p className="float-right iconcenter" style={{margin: 10, color: 'rgb(231, 61, 209)'}}>
+                                            <SiMixer />DJ Mundiales!</p>
+                                        </a>
+                                    </div>
+                                </IconContext.Provider></li>
+                            <li><IconContext.Provider value={{ color:"#EEB1DE", className: "global-class-name", size:'1em', size:'1.5em'}} >
+                                    <div>
+                                        <a href="/Boleteria" target='_blank'>
+                                            <p className="float-right iconcenter" style={{margin: 10, color: 'rgb(231, 61, 209)'}}>
+                                            <TiTicket />Entradas!!</p>
+                                        </a>
+                                    </div>
+                                </IconContext.Provider></li>
+                        </ul>
+                    </div>
                 </div>
                 <div className='carouselCenter slidesCarousel'>
                     <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
@@ -99,7 +101,7 @@ export default function Home(){
             <div className='containerCards'>
                 <ul className='proxEventos'>
                     <li className='event'>
-                        <div class="card" className='cardStyleEvent'>
+                        <div class="card" className='cardStyleEvent' style={{display: 'flex', flexFlow: 'column'}}>
                                 <img class="imgCard" style={{borderRadius: '10'}} src={event1} alt="Card image cap"/>
                             <div class="card-body">
                                 <h5 class="card-title">AC - DC</h5>
@@ -110,7 +112,7 @@ export default function Home(){
                         </div>
                     </li>
                     <li className='event'>
-                        <div class="card" className='cardStyleEvent'>
+                        <div class="card" className='cardStyleEvent' style={{display: 'flex', flexFlow: 'column'}}>
                                 <img class="imgCard" style={{borderRadius: '10'}} src={event2} alt="Card image cap"/>
                             <div class="card-body">
                                 <h5 class="card-title">Andre Rieu</h5>
@@ -120,7 +122,7 @@ export default function Home(){
                         </div>
                     </li>
                     <li className='event' style={{borderRadius: '10'}}>
-                        <div class="card"  className='cardStyleEvent'>
+                        <div class="card"  className='cardStyleEvent' style={{display: 'flex', flexFlow: 'column'}}>
                                 <img class="imgCard" style={{borderRadius: '10'}} src={event3} alt="Card image cap"/>
                             <div class="card-body">
                                 <h5 class="card-title">Filarmonica Bgta</h5>

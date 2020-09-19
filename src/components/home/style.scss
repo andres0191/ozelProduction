@@ -1,19 +1,15 @@
 .titulo{
     text-align: center;
-    color: rgb(231, 61, 209);
+    color: rgb(26, 37, 30);
     font-size: 60px;
     margin: 3%;
     position: relative;
+    width: auto;
 }
 @media (max-width: 1141px) {
     .titulo{
         flex-flow: column;
         font-size: 30px;   
-    }
-}
-@media (max-width: 1141px){
-    p{
-        width: 30%;
     }
 }
 .datosEvento{
@@ -54,6 +50,13 @@
     margin: auto;
     border-radius: 20px;
 }
+@media (max-width: 500px){
+    .slidesCarousel{
+        position: relative;
+        top: 0px;
+        width: 72%;
+    }
+}
 .proxEventos{
     list-style: none;
     display: flex;
@@ -64,6 +67,8 @@
 @media (max-width: 1141px) {
     .proxEventos{
         flex-flow: column;
+        margin: 0;
+        padding: 0;
     }
 }
 .event{
@@ -84,6 +89,9 @@
 @media (max-width: 500px){
     .imgCard{
         border-radius: 10px;
+        justify-content: center;
+        display: block;
+        margin-left: 15%;
         width: 60%;
         }
 }
@@ -96,4 +104,26 @@
     margin-top: 0;
     margin-bottom: 1rem;
     text-align: justify;
+}
+@media (max-width: 500px){
+    .imgCard{
+        border-radius: 10px;
+        margin: auto;
+        }
+}
+@media (max-width: 500px){
+    .dataEventResponsive{
+        display: flex;
+        flex-flow: column;
+        position: relative;
+        top: 140px;
+
+    }
+}
+@media (max-width: 500px){
+    .dataandCarouserl{
+        display: flex;
+        flex-flow: column;
+        margin-bottom: 45%;
+    }
 }

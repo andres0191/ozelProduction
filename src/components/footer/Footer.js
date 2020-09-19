@@ -17,7 +17,7 @@ export default function Footer(){
             <div className="logo">
                 <img src="https://ozelproducciones.com/app/themes/ozel/dist/images/iso-triangle-white.svg?id=1cb39a9af6741f0793b3" alt=""/>
             </div>
-            <div className='text'>
+            <div className='text' style={{ width:'auto'}}>
                 <p>Contamos con un talento humano de primera y con equipos de ultima generación dispuestos para cumplir con la experiencia Ozel producciones.</p>
             </div>
             <div>
@@ -61,7 +61,7 @@ export default function Footer(){
                     <li><IconContext.Provider value={{ color:"#EEB1DE", className: "global-class-name", size:'1em', size:'1.5em'}} >
                         <div>
                             <a href="https://www.google.com/maps/?hl=es"  target='_blank'>
-                                <p className="float-right iconcenter" style={{margin: 10, color: 'white'}}>
+                                <p className="float-right iconcenter" style={{margin: 10, width:'auto', color: 'white'}}>
                                 <GoLocation />Cra 72 # 152 B 79 Bogotá</p>
                             </a>
                         </div>
@@ -69,7 +69,7 @@ export default function Footer(){
                     <li><IconContext.Provider value={{ color:"#EEB1DE", className: "global-class-name", size:'1em', size:'1.5em'}} >
                         <div>
                             <a href="https://wa.link/7o1kcm"  target='_blank'>
-                                <p className="float-right iconcenter" style={{margin: 10, color: 'white'}}>
+                                <p className="float-right iconcenter" style={{margin: 10, width:'auto', color: 'white'}}>
                                 <BiPhone />+57 (301) 386 63 22</p>
                             </a>
                         </div>
@@ -77,7 +77,7 @@ export default function Footer(){
                     <li><IconContext.Provider value={{ color:"#EEB1DE", className: "global-class-name", size:'1em', size:'1.5em'}} >
                         <div>
                             <a href="mailto: andres.bernal@ozelproducciones.com" target='_blank'>
-                                <p className="float-right iconcenter" style={{margin: 10, color: 'white'}}>
+                                <p className="float-right iconcenter" style={{margin: 10, width:'auto', color: 'white'}}>
                                 <AiOutlineMail />Ponte en contacot con nostros</p>
                             </a>
                         </div>

@@ -13,10 +13,28 @@
     text-align: justify;
     margin-top: 20px;
 }
+@media (max-width: 1141px){
+    .text{
+        margin-left: 26%;
+        color: white;
+        text-align: justify;
+        margin-top: 20px;
+        margin-right: 10%;
+        position: initial;
+
+    }
+}
 .logo{
     margin-left: 5%;
     padding: 2%;
     position: absolute;
+}
+@media (max-width: 1141px){
+    .logo{
+        margin-left: -4%;
+        padding: 11%;
+        position: absolute;
+    }
 }
 .socialNetworks{
     color: white;
@@ -26,30 +44,19 @@
     padding: 35px;
     list-style: none;
 }
+@media (max-width: 1141px){
+    .socialNetworks{
+        justify-content: center;
+        display: flex;
+        margin: auto;
+    }
+}
 .contact{
     color: white;
     justify-content: space-around;
     list-style: none;
     display: flex;
+    width: auto;
 }
 
 
-
-/* .icons{
-    color: white;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-left: 50%;
-    display: -ms-flexbox!important;
-    position: relative;
-    display: inherit;
-}
-.contact{
-    position: inherit;
-    display: inherit;
-    justify-content: center;
-    align-items: center;
-
-} */
