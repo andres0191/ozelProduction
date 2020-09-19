@@ -135,36 +135,28 @@ export default function Boleteria(){
                     <div class="modal-content">
                         <div class="modal-header text-center">
                             <h4 class="modal-title w-100 font-weight-bold">Registrate!</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
                         </div>
                         <div class='modal-backgrop fade show'></div>
                         <div class="modal-body mx-3">
                             <div class="md-form mb-5">
                                 <i class="fas fa-user prefix grey-text"></i>
                                 <input type="text" id="form34" class="form-control validate" onChange={ event => userValidation(event)} placeholder='Nombre' />
-                                <label data-error="wrong" data-success="right" for="form34">Nombre</label>
                             </div>
                             <div class="md-form mb-5">
                                 <i class="fas fa-tag prefix grey-text"></i>
                                 <input type="number" id="form32" class="form-control validate" onChange={ event => numberValidation(event)} placeholder='Telefono' />
-                                <label data-error="wrong" data-success="right" for="form32">Telefono</label>
                             </div>
                             <div class="md-form mb-5">
                                 <i class="fas fa-user prefix grey-text"></i>
                                 <input type="number" id="form34" class="form-control validate" onChange={ event => dniValidation(event)} placeholder='Cedula' />
-                                <label data-error="wrong" data-success="right" for="form34">Cedula</label>
                             </div>
                             <div class="md-form mb-5">
                                 <i class="fas fa-envelope prefix grey-text"></i>
                                 <input type="email" id="form29" class="form-control validate" onChange={ event => emailValidation(event)} placeholder='Correo' />
-                                <label data-error="wrong" data-success="right" for="form29">Correo</label>
                             </div>
                             <div class="md-form mb-5">
                                 <i class="fas fa-user prefix grey-text"></i>
                                 <input type="password" id="form34" class="form-control validate" onChange={ event => passValidation(event)} placeholder='Contrasena' />
-                                <label data-error="wrong" data-success="right" for="form34">Contrasena</label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
