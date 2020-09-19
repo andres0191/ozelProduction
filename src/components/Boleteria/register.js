@@ -1,48 +1,169 @@
-import React from 'react';
-import { useEffect, useRef } from 'react'
+import './style.scss';
+import React, { useState, useEffect, useRef } from 'react';
 
 export default function Boleteria(){
     const openModal = useRef(null);
+    const myModal = useRef(null);
+    const [validation, setValidation] = useState({
+        userName: '',
+        isName: false,
+        userNumber: '',
+        isNumber: false,
+        userDni: '',
+        isDni: false,
+        userEmail: '',
+        isEmail: false,
+        userPassword: '',
+        isPassword: false,
+    });
 
-    useEffect(() => {
+    const handleOnChange = (event) =>{
+        const inputValue = event.target.value;
+
+    }
+    const userValidation = (event) =>{
+        event.preventDefault();
+        setValidation({
+            ...validation,
+            userName: event.target.value
+        });
+        const regexForName = /^[A-Za-z]+$/.test(event.target.value);
+        if(regexForName){
+            setValidation({
+                ...validation,
+                'isName': true
+            })
+        }else {
+            setValidation({
+                ...validation,
+                'isName': false
+            })
+        }
         
-        openModal.current.click()
+    }
+    const numberValidation = (event) =>{
+        event.preventDefault();
+        setValidation({
+            ...validation,
+            userNumber: event.target.value
+        });
+        const regexForNumber = /^\d*$/.test(event.target.value);
+        if(regexForNumber){
+            setValidation({
+                ...validation,
+                'isNumber': true
+            })
+        }else {
+            setValidation({
+                ...validation,
+                'isNumber': false
+            })
+        }
+    }
+    const dniValidation = (event) =>{
+        event.preventDefault();
+        setValidation({
+            ...validation,
+            userDni: event.target.value
+        });
+        const regexForNumber = /^\d*$/.test(event.target.value);
+        if(regexForNumber){
+            setValidation({
+                ...validation,
+                'isDni': true
+            })
+        }else {
+            setValidation({
+                ...validation,
+                'isDni': false
+            })
+        }
+    }
+    const emailValidation = (event) =>{
+        event.preventDefault();
+        setValidation({
+            ...validation,
+            userEmail: event.target.value
+        });
+        const regexForNumber = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(event.target.value);
+        if(regexForNumber){
+            setValidation({
+                ...validation,
+                'isEmail': true
+            })
+        }else {
+            setValidation({
+                ...validation,
+                'isEmail': false
+            })
+        }
+    }
+    const passValidation = (event) =>{
+        event.preventDefault();
+        setValidation({
+            ...validation,
+            userName: event.target.value
+        });
+        const regexForName = /^\d*$/.test(event.target.value);
+        if(regexForName){
+            setValidation({
+                ...validation,
+                'isPassword': true
+            })
+        }else {
+            setValidation({
+                ...validation,
+                'isPassword': false
+            })
+        }
+    }
+
+    const enviar = (event) =>{
+        event.preventDefault();
+        if(validation.userName && validation.userNumber && validation.userDni && validation.userEmail && validation.userPassword ){
+            myModal.current.removeAttribute('data-backdrop');
+            openModal.current.click();
+        }
+    }
+    useEffect(() => {
+        openModal.current.click();
     })
     return(
         <div>
-            <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
+            <div class="modal fade" ref={myModal} data-backdrop="static" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" >
                     <div class="modal-content">
                         <div class="modal-header text-center">
-                            <h4 class="modal-title w-100 font-weight-bold">Write to us</h4>
+                            <h4 class="modal-title w-100 font-weight-bold">Registrate!</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
+                        <div class='modal-backgrop fade show'></div>
                         <div class="modal-body mx-3">
                             <div class="md-form mb-5">
                                 <i class="fas fa-user prefix grey-text"></i>
-                                <input type="text" id="form34" class="form-control validate"/>
+                                <input type="text" id="form34" class="form-control validate" onChange={ event => userValidation(event)} placeholder='Nombre' />
                                 <label data-error="wrong" data-success="right" for="form34">Nombre</label>
                             </div>
                             <div class="md-form mb-5">
                                 <i class="fas fa-tag prefix grey-text"></i>
-                                <input type="number" id="form32" class="form-control validate"/>
+                                <input type="number" id="form32" class="form-control validate" onChange={ event => numberValidation(event)} placeholder='Telefono' />
                                 <label data-error="wrong" data-success="right" for="form32">Telefono</label>
                             </div>
                             <div class="md-form mb-5">
                                 <i class="fas fa-user prefix grey-text"></i>
-                                <input type="number" id="form34" class="form-control validate"/>
+                                <input type="number" id="form34" class="form-control validate" onChange={ event => dniValidation(event)} placeholder='Cedula' />
                                 <label data-error="wrong" data-success="right" for="form34">Cedula</label>
                             </div>
                             <div class="md-form mb-5">
                                 <i class="fas fa-envelope prefix grey-text"></i>
-                                <input type="email" id="form29" class="form-control validate"/>
+                                <input type="email" id="form29" class="form-control validate" onChange={ event => emailValidation(event)} placeholder='Correo' />
                                 <label data-error="wrong" data-success="right" for="form29">Correo</label>
                             </div>
                             <div class="md-form mb-5">
                                 <i class="fas fa-user prefix grey-text"></i>
-                                <input type="password" id="form34" class="form-control validate"/>
+                                <input type="password" id="form34" class="form-control validate" onChange={ event => passValidation(event)} placeholder='Contrasena' />
                                 <label data-error="wrong" data-success="right" for="form34">Contrasena</label>
                             </div>
                             <div class="form-check">
@@ -52,7 +173,7 @@ export default function Boleteria(){
 
                         </div>
                         <div class="modal-footer d-flex justify-content-center">
-                            <button class="btn btn-unique">Enviar<i class="fas fa-paper-plane-o ml-1"></i></button>
+                            <button class="btn btn-unique" onClick={event => enviar(event)}>Enviar<i class="fas fa-paper-plane-o ml-1"></i></button>
                         </div>
                     </div>
                 </div>
