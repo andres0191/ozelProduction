@@ -61,7 +61,7 @@ export default function Home(){
                                 <div>
                                     <a href="/Boleteria" target='_blank'>
                                         <p className="float-right iconcenter" style={{margin: 10, color: 'rgb(231, 61, 209)'}}>
-                                        <TiTicket />DJ Mundiales!</p>
+                                        <TiTicket />Entradas!!</p>
                                     </a>
                                 </div>
                             </IconContext.Provider></li>

@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 export default function Boleteria(){
     const openModal = useRef(null);
     const myModal = useRef(null);
+    const [isChecked, setIschecked] = useState(false);
     const [validation, setValidation] = useState({
         userName: '',
         isName: false,
@@ -20,7 +21,7 @@ export default function Boleteria(){
             setValidation({
             userName: event.target.value
         });
-        const regexForName = /^[A-Za-z]+$/.test(event.target.value);
+        const regexForName =  new RegExp("^[a-zA-Z ]+$").test(event.target.value);
         if(regexForName){
             setValidation({
                 ...validation,
@@ -29,8 +30,8 @@ export default function Boleteria(){
         }else {
             setValidation({
                 ...validation,
-                'isName': false
-            })
+                'isName': false,
+            });
         } 
         
     }
@@ -77,7 +78,7 @@ export default function Boleteria(){
             ...validation,
             userEmail: event.target.value
         });
-        const regexForNumber = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(event.target.value);
+        const regexForNumber = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(event.target.value);
         if(regexForNumber){
             setValidation({
                 ...validation,
@@ -109,12 +110,13 @@ export default function Boleteria(){
             })
         }
     }
-/* event.target.checked */
     const enviar = (event) =>{
         console.log(validation.isName, validation.isNumber, validation.isDni, validation.isEmail, validation.isPassword)
-        if(validation.isName && validation.isNumber && validation.isDni && validation.isEmail && validation.isPassword ){
+        if(validation.isName && validation.isNumber && validation.isDni && validation.isEmail && validation.isPassword && isChecked ){
             myModal.current.removeAttribute('data-backdrop');
             openModal.current.click();
+        }else{
+            alert('Recuerda que: El nombre solo debe contener letras y tu correo debe contener almenos un simbolo  @ seguido de un punto (.), la contrasena debe tener maximo 10 caracteres y aceptar el tratamiento de datos personales')
         }
     }
     useEffect(() => {
@@ -152,13 +154,15 @@ export default function Boleteria(){
                                 <input type="password" id="form34" class="form-control validate" onChange={ event => passValidation(event)} placeholder='Contrasena' />
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
+                                {isChecked ? <p>Muchas Gracias!</p> : ''}
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" onChange={event => setIschecked(event.target.checked)} />
                                 <label class="form-check-label" for="defaultCheck1"><a href='https://www.jordandesajonia.edu.co/SAJONIA2018/images/2019/Documentos/FORMATO%20DE%20AUTORIZACIO%CC%81N%20PARA%20EL%20TRATAMIENTO%20DE%20DATOS%20PERSONALES.pdf' >Autorizacion de datos personales</a></label>
                             </div>
 
                         </div>
                         <div class="modal-footer d-flex justify-content-center">
-                            <button class="btn btn-unique" onClick={event => enviar(event)}>Enviar<i class="fas fa-paper-plane-o ml-1"></i></button>
+                            <button class="btn btn-unique" onClick={event => enviar(event)}>Enviar<i class="fas fa-paper-plane-o ml-1"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
