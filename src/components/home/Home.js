@@ -20,7 +20,7 @@ export default function Home(){
     return(
         <div>
             <div className='titulo'>
-                <p>TOMORROWLAND</p>
+                <strong><p>TOMORROWLAND</p></strong>
             </div>
             <div className='dataandCarouserl'>
                 <div className='dataEventResponsive'>
@@ -97,6 +97,9 @@ export default function Home(){
                         </a>
                     </div>
                 </div>
+            </div>
+            <div className='titulo'>
+                <strong><p>Proximos Eventos...</p></strong>
             </div>
             <div className='containerCards'>
                 <ul className='proxEventos'>
