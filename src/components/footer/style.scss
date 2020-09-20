@@ -1,5 +1,5 @@
 .footer{
-    background: linear-gradient(90deg, rgb(15, 41, 49) 0%, rgb(42, 165, 159) 74%);
+    background: linear-gradient(90deg, rgb(39, 255, 237) 0%, rgb(209, 80, 226) 74%);
     width: 100%;
     border-top-left-radius: 80px;
     border-top-right-radius: 80px;
@@ -38,11 +38,13 @@
 }
 .socialNetworks{
     color: white;
-    justify-content: flex-end;
-    display: grid;
-    margin: 10px;
     padding: 35px;
     list-style: none;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    margin-top: 3%;
+    padding: 1%;
 }
 @media (max-width: 1141px){
     .socialNetworks{

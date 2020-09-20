@@ -6,7 +6,7 @@ import imagen3 from '../images/evento/2019-3.jpg';
 import event1 from '../images/evento1/acdc.jpeg';
 import event2 from '../images/evento1/andrerieu.jpg';
 import event3 from '../images/evento1/filarmonicaBgta.jpg';
-import event4 from '../images/evento1/teatro.jpg';
+import Fondo from '../images/fondo/marshmellow.jpg';
 import { IconContext } from "react-icons";
 import { MdDateRange } from 'react-icons/md';
 import { BiMap } from 'react-icons/bi';
@@ -30,8 +30,8 @@ export default function Home(){
                                 <IconContext.Provider value={{ color:"#EEB1DE", className: "global-class-name", size:'1em', size:'1.5em'}} >
                                     <div>
                                         <a href="/Boleteria" target='_blank'>
-                                            <p className="float-right iconcenter" style={{margin: 10, color: 'rgb(231, 61, 209)'}}>
-                                        <MdDateRange /> Nov. 20</p>
+                                           <strong><p className="float-right iconcenter" style={{margin: 10, color: 'rgb(231, 61, 209)'}}>
+                                        <MdDateRange /> Nov. 20</p></strong>
                                         </a>
                                     </div>
                                 </IconContext.Provider>
@@ -40,8 +40,8 @@ export default function Home(){
                                 <IconContext.Provider value={{ color:"#EEB1DE", className: "global-class-name", size:'1em', size:'1.5em'}} >
                                     <div>
                                         <a href="/Boleteria" target='_blank'>
-                                            <p className="float-right iconcenter" style={{margin: 10, color: 'rgb(231, 61, 209)'}}>
-                                            <BiMap /> Belgica</p>
+                                        <strong><p className="float-right iconcenter" style={{margin: 10, color: 'rgb(231, 61, 209)'}}>
+                                            <BiMap /> Belgica</p></strong>
                                         </a>
                                     </div>
                                 </IconContext.Provider>
@@ -53,16 +53,16 @@ export default function Home(){
                             <li><IconContext.Provider value={{ color:"#EEB1DE", className: "global-class-name", size:'1em', size:'1.5em'}} >
                                     <div>
                                         <a href="/Boleteria" target='_blank'>
-                                            <p className="float-right iconcenter" style={{margin: 10, color: 'rgb(231, 61, 209)'}}>
-                                            <SiMixer />DJ Mundiales!</p>
+                                        <strong><p className="float-right iconcenter" style={{margin: 10, color: 'rgb(231, 61, 209)'}}>
+                                            <SiMixer />DJ Mundiales!</p></strong>
                                         </a>
                                     </div>
                                 </IconContext.Provider></li>
                             <li><IconContext.Provider value={{ color:"#EEB1DE", className: "global-class-name", size:'1em', size:'1.5em'}} >
                                     <div>
                                         <a href="/Boleteria" target='_blank'>
-                                            <p className="float-right iconcenter" style={{margin: 10, color: 'rgb(231, 61, 209)'}}>
-                                            <TiTicket />Entradas!!</p>
+                                        <strong><p className="float-right iconcenter" style={{margin: 10, color: 'rgb(231, 61, 209)'}}>
+                                            <TiTicket />Entradas!!</p></strong>
                                         </a>
                                     </div>
                                 </IconContext.Provider></li>
