@@ -1,6 +1,6 @@
-### Prueba Tecnica Ozel Productions
+# Technical test for Ozel Productions
 
-## Evento: Tomorrowland - Bélgica!
+## Event: Tomorrowland - Belgica!
 
 ![Tomorrowland](https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/tomorrowland-2020-1591353633.jpg)
 
