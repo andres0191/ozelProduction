@@ -129,7 +129,7 @@ export default function Boleteria(){
                 <div class="modal-dialog" role="document" >
                     <div class="modal-content">
                         <div class="modal-header text-center">
-                            <h4 class="modal-title w-100 font-weight-bold">Registrate!</h4>
+                            <h4 class="modal-title w-100 font-weight-bold">Regístrate!</h4>
                         </div>
                         <div class='modal-backgrop fade show'></div>
                         <div class="modal-body mx-3">
@@ -156,7 +156,7 @@ export default function Boleteria(){
                             <div class="form-check">
                                 {isChecked ? <p>Muchas Gracias!</p> : ''}
                                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" onChange={event => setIschecked(event.target.checked)} />
-                                <label class="form-check-label" for="defaultCheck1"><a href='https://www.jordandesajonia.edu.co/SAJONIA2018/images/2019/Documentos/FORMATO%20DE%20AUTORIZACIO%CC%81N%20PARA%20EL%20TRATAMIENTO%20DE%20DATOS%20PERSONALES.pdf' >Autorizacion de datos personales</a></label>
+                                <label class="form-check-label" for="defaultCheck1"><a href='https://www.jordandesajonia.edu.co/SAJONIA2018/images/2019/Documentos/FORMATO%20DE%20AUTORIZACIO%CC%81N%20PARA%20EL%20TRATAMIENTO%20DE%20DATOS%20PERSONALES.pdf' >Autorización de datos personales</a></label>
                             </div>
 
                         </div>

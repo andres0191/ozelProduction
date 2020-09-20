@@ -3,7 +3,7 @@ import './style.scss';
 import imagen1 from '../images/evento/2019-7.jpg';
 import imagen2 from '../images/evento/2019-2.jpg';
 import imagen3 from '../images/evento/2019-3.jpg';
-import event1 from '../images/evento1/acdc.jpeg';
+import event1 from '../images/evento1/maxresdefault.jpg';
 import event2 from '../images/evento1/andrerieu.jpg';
 import event3 from '../images/evento1/filarmonicaBgta.jpg';
 import Fondo from '../images/fondo/marshmellow.jpg';
@@ -41,7 +41,7 @@ export default function Home(){
                                     <div>
                                         <a href="/Boleteria" target='_blank'>
                                         <strong><p className="float-right iconcenter" style={{margin: 10, color: 'rgb(231, 61, 209)'}}>
-                                            <BiMap /> Belgica</p></strong>
+                                            <BiMap /> Bélgica</p></strong>
                                         </a>
                                     </div>
                                 </IconContext.Provider>
@@ -105,7 +105,7 @@ export default function Home(){
                 <ul className='proxEventos'>
                     <li className='event'>
                         <div class="card" className='cardStyleEvent' style={{display: 'flex', flexFlow: 'column'}}>
-                                <img class="imgCard" style={{borderRadius: '10'}} src={event1} alt="Card image cap"/>
+                                <img class="imgCard" style={{borderRadius: '10',}} src={event1} alt="Card image cap"/>
                             <div class="card-body">
                                 <h5 class="card-title">AC - DC</h5>
                                 <p class="card-text pCards">AC/DC surgió en 1973 en Sydney. La banda fue fundada por los hermanos Malcolm y Angus Young procedentes de Escocia.
@@ -128,7 +128,7 @@ export default function Home(){
                         <div class="card"  className='cardStyleEvent' style={{display: 'flex', flexFlow: 'column'}}>
                                 <img class="imgCard" style={{borderRadius: '10'}} src={event3} alt="Card image cap"/>
                             <div class="card-body">
-                                <h5 class="card-title">Filarmonica Bgta</h5>
+                                <h5 class="card-title">Filarmonica Bogotá</h5>
                                 <p class="card-text pCards">La Orquesta Filarmónica de Bogotá, entidad adscrita a la Alcaldía Mayor desde el Sector Cultura, apoya y acoge a las medidas dictadas por la Alcaldía de Bogotá y el Gobierno Nacional, para mitigar la propagación de virus COVID-19 y garantizar el bienestar del público, de sus músicos y colaboradores</p>
                                 <a target='_blank' href="https://filarmonicabogota.gov.co/" class="btn btn-primary" style={{backgroundColor: '#E973DB', borderColor: 'white', color: 'white'}}>Ver mas</a>
                             </div>
